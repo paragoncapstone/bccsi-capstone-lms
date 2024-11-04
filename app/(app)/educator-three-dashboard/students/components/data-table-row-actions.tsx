@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { Row } from "@tanstack/react-table";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -392,7 +393,7 @@ export function DataTableRowActions<TData>({
           <div className="flex flex-col gap-4 py-4">
             <div className="flex">
               <div className="w-1/3 pr-4">
-                <img
+                <Image
                   src={formData.image}
                   alt="Student Image"
                   className="w-full h-auto border rounded-lg"

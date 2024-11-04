@@ -559,7 +559,7 @@ export default function Reports() {
             </div>
           )}
           {/* Quiz History Table */}
-          <div className="flex gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <CSVLink
               data={historyData?.quizHistory || []}
               filename={"quiz_history.csv"}
@@ -589,7 +589,7 @@ export default function Reports() {
             onPageChange={(page) => setQuizPage(page)}
           />
 
-          <div className="flex gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 mb-6 mt-4">
             <CSVLink
               data={historyData?.voiceExercisesHistory || []}
               filename={"voice_exercises.csv"}
@@ -621,7 +621,7 @@ export default function Reports() {
             itemsPerPage={itemsPerPage}
             onPageChange={(page) => setVoicePage(page)}
           />
-          <div className="flex gap-4 mb-6">
+          <div className="flex flex-col sm:flex-row gap-4 mb-6 mt-4">
             <CSVLink
               data={historyData?.comprehensionHistory || []}
               filename={"comprehension_history.csv"}

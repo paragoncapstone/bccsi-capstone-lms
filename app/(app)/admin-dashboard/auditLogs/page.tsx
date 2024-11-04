@@ -90,7 +90,7 @@ export default function AuditLogs() {
 
     setFilteredLogs(sorted);
     setCurrentPage(1);
-  }, [search, startDate, endDate, logs, actionFilter, sortConfig]);
+  }, [search, startDate, endDate, logs, actionFilter, sortConfig, loading]);
 
   const startIdx = (currentPage - 1) * logsPerPage;
   const currentLogs = filteredLogs.slice(startIdx, startIdx + logsPerPage);
@@ -182,7 +182,7 @@ export default function AuditLogs() {
 
         {/* Sidebar Mobile Menu */}
         <div
-          className={`fixed top-0 left-0 w-full h-full bg-blue-300 p-4 drop-shadow-lg md:hidden transform transition-transform duration-300 ease-in-out ${
+          className={`fixed top-0 left-0 w-full z-10 h-full bg-blue-300 p-4 drop-shadow-lg md:hidden transform transition-transform duration-300 ease-in-out ${
             sidebarOpen ? "translate-x-0" : "-translate-x-full"
           }`}
         >
@@ -192,7 +192,18 @@ export default function AuditLogs() {
             onClick={() => setSidebarOpen(false)}
             aria-label="Close menu"
           >
-            <IoCloseCircle className="h-6 w-6 text-gray-600" />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              className="h-6 w-6 text-gray-600"
+            >
+              <path d="M6 18L18 6M6 6l12 12" />
+            </svg>
           </button>
         </div>
 

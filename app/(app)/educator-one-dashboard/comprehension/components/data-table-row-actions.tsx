@@ -124,7 +124,7 @@ export function DataTableRowActions<TData>({
       }
     };
     fetchModules();
-  }, []);
+  }, [formData.moduleId]);
 
   useEffect(() => {
     if (formData.moduleId) {
