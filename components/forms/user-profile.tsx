@@ -106,7 +106,9 @@ export function UserProfile() {
 
       const result = await response.json();
       toast.success("Profile updated successfully!");
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
       setPassword("");
     } catch (error) {
       setError("Failed to update profile");

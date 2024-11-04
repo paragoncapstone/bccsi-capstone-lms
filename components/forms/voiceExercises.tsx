@@ -183,7 +183,9 @@ export function VoiceExercises() {
         },
       ]);
       toast.success("Voice exercises added successfully.");
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 2000);
       setSelectedGrade("");
     } catch (error) {
       const err = error as Error;

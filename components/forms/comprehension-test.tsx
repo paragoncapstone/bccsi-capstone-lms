@@ -214,7 +214,11 @@ export default function ComprehensionTest() {
       setSelectedVoiceId("");
       setFormErrors({});
       toast.success("Comprehension Test added successfully.");
-      window.location.reload();
+      setTimeout(() => {
+        setTimeout(() => {
+          window.location.reload();
+        }, 2000);
+      }, 2000);
     } catch (error) {
       const err = error as Error;
       console.error(err);
