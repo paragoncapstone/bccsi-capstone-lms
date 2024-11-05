@@ -88,7 +88,7 @@ const VoiceExercisesList = ({ moduleTitle }: VoiceExercisesListProps) => {
         }
 
         const response = await fetch(
-          `http://127.0.0.1:5000/api/voice-exercises?moduleTitle=${encodeURIComponent(
+          `https://bccsi-flask-stt-app.onrender.com/api/voice-exercises?moduleTitle=${encodeURIComponent(
             moduleTitle
           )}&studentId=${session.user.studentId}`
         );
@@ -165,7 +165,7 @@ const VoiceExercisesList = ({ moduleTitle }: VoiceExercisesListProps) => {
 
     try {
       const response = await fetch(
-        "http://127.0.0.1:5000/api/voice-exercises-history",
+        "https://bccsi-flask-stt-app.onrender.com/api/voice-exercises-history",
         {
           method: "POST",
           body: formData,
@@ -220,7 +220,7 @@ const VoiceExercisesList = ({ moduleTitle }: VoiceExercisesListProps) => {
       );
 
       const response = await fetch(
-        "http://127.0.0.1:5000/api/submit-exercise",
+        "https://bccsi-flask-stt-app.onrender.com/api/submit-exercise",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
